@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      💿
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="piu">
+    <ion-toolbar>
+      <ion-title class="ion-text-center" class="negrito">COMECE COM:   {{valendo}}</ion-title>
+    </ion-toolbar>
+    <ion-grid>
+      <ion-row>
+      <ion-col class="c1"><ion-button (click)="mudarpeso(1)">1</ion-button></ion-col>
+      <ion-col class="c1"><ion-button (click)="mudarpeso(3)">3</ion-button></ion-col>
+      <ion-col class="c1"><ion-button (click)="mudarpeso(6)">6</ion-button></ion-col>
+      <ion-col class="c1"><ion-button (click)="mudarpeso(9)">9</ion-button></ion-col>
+      <ion-col class="c1"><ion-button (click)="mudarpeso(12)">12</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-card>
+
+
+    <ion-card class="stop">
+    <ion-grid>
+    <ion-row>
+    <ion-col><ion-title class="ne1">TIME 1</ion-title></ion-col>
+    <ion-col><ion-title class="ne2">TIME 2</ion-title></ion-col>
+    </ion-row>
+    <br>
+
+    <ion-row>
+    <ion-col class="c2"><ion-button (click)="somarplacart1()"> + </ion-button></ion-col>
+    <ion-col class="c2"><ion-button (click)="somarplacart2()"> + </ion-button></ion-col>
+    </ion-row>
+
+
+    <ion-row >
+      <ion-col> {{placart1}} </ion-col>
+      <ion-col> {{placart2}}  </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="c2">
+        <ion-button (click)="diminuir_placart1()"> - </ion-button>
+      </ion-col>
+
+      <ion-col class="c2">
+        <ion-button (click)="diminuir_placart2()"> - </ion-button>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+    </ion-card>
+
+
+
+    <ion-card class="ploc">
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-title class="ne3">PARTIDAS</ion-title></ion-col>
+      </ion-row>
+
+      <ion-row>
+    <ion-col>TIME 1</ion-col>
+    <ion-col>{{totalt1}}</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>TIME 2</ion-col>
+        <ion-col>{{totalt2}}</ion-col>
+          </ion-row>
+    </ion-grid>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar (click)="limpar()" class="btn" color="dark">
+    <ion-title class="ion-text-center">REINICIAR</ion-title>
+  </ion-toolbar>
+</ion-footer>
